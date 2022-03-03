@@ -1,9 +1,9 @@
 <template>
     <ul>
       <VideoListItem
-          :key="video.snippet.channelId"
           v-for="video of videos"
-          :videoItem="video"
+          :video="video"
+          :key="video.etag"
       />
     </ul>
 </template>
