@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <SearchBar @termChange="onTermChange">
     </SearchBar>
     <VideoList :videos="videos"/>
@@ -35,8 +35,6 @@ export default {
         }
       }).then(response =>
           {
-            console.log(response.data.items[0].snippet);
-            console.log(response.data.items[0].snippet.description);
             this.videos = this.data = response.data.items;
           }
       );
