@@ -12,7 +12,9 @@ export default {
   },
   methods: {
     onInput(event){
-      this.$emit('termChange', event.target.value);
+      setTimeout(() => {
+        this.$emit('termChange', event.target.value);
+      }, 4000);
     }
   }
 }
